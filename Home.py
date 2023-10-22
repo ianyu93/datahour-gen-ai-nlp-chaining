@@ -11,9 +11,6 @@ from src.utils import obj_to_json
 with open("assets/examples.json") as f:
     EXAMPLES = json.load(f)
 
-with open("assets/docs.json") as f:
-    DOCS = json.load(f)
-
 # Streamlit app title and overview
 st.title("NLP Chaining Example")
 st.markdown(
