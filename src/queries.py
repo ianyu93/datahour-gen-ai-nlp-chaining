@@ -51,22 +51,20 @@ def ner(entity_types: List[models.EntityType], text: str) -> List[models.Entity]
     Returns:
         List of named entities with start and end position, label, and text.
     """
-    messages = (
-        [
-            {
-                "role": "user",
-                "content": f"""
+    messages = [
+        {
+            "role": "user",
+            "content": f"""
  You are a named entity recognition model.  Please be as strict as possible in your predictions.
  You are given a text, and you are to extract the following entity types: {entity_types}
  """,
-            },
-            {"role": "user", "content": f"Text: {text}"},
-        ],
-    )
+        },
+        {"role": "user", "content": f"Text: {text}"},
+    ]
     functions = [models.NEROutput.openai_schema]
     function_call = {"name": models.NEROutput.openai_schema["name"]}
     response = chat_completion_request(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         messages=messages,
         functions=functions,
         function_call=function_call,
@@ -74,7 +72,7 @@ def ner(entity_types: List[models.EntityType], text: str) -> List[models.Entity]
     return models.NEROutput.from_response(response)
 
 
-def ner_data_quality_check(entity: models.Entity, text: str) -> List[models.Nli]:
+def ner_data_quality_check(entity: models.Entity, text: str) -> List[models.NliOutput]:
     """Check the quality of a named entity extracted from a text.
 
     Args:
@@ -84,25 +82,24 @@ def ner_data_quality_check(entity: models.Entity, text: str) -> List[models.Nli]
     Returns:
         List of natural language inference labels with explanations.
     """
-    messages = (
-        [
-            {
-                "role": "user",
-                "content": f"""
+    messages = [
+        {
+            "role": "user",
+            "content": f"""
 Premise: Text: {text}
 Hypothesis: The text contains {entity.label}: {entity.text}
 """,
-            },
-            {
-                "role": "user",
-                "content": f"""
+        },
+        {
+            "role": "user",
+            "content": f"""
 ENTITY Span: {entity.start} - {entity.end}
 Entity Type: {entity.label}
 Entity Value: {entity.text}
 """,
-            },
-        ],
-    )
+        },
+    ]
+
     functions = [models.NliOutput.openai_schema]
     function_call = {"name": models.NliOutput.openai_schema["name"]}
     response = chat_completion_request(
