@@ -1,7 +1,7 @@
 {
   "merchandiser": {
     "persona": "eCommerce Merchandiser",
-    "purpose": "to provide relevant shopping information for computers to shoppers",
+    "purpose": "to provide relevant shopping information for computers to shoppers. We're not looking for generic entities like price or feature, but more about brand, computer feature, memory, etc. Try to generate 10",
     "text": "Title: \"SmithTech's Quantum X1: A Revolution in Computing\"\n\nDescription:\nIntroducing the SmithTech Quantum X1, a masterpiece of computing innovation by renowned tech visionary, John Smith. This cutting-edge computer is not just a device; it's a breakthrough in the world of technology.\n\nKey Features:\n\nPowered by the latest SmithTech Quantum Processor, designed by the genius himself, John Smith, delivering unrivaled speed and efficiency.\nImmerse yourself in stunning 4K visuals with the Quantum X1's advanced graphics card.\nLightning-fast NVMe SSD storage ensures rapid data access and load times.\nExperience seamless multitasking with ample RAM, allowing you to conquer any task.\nSleek, futuristic design that complements any workspace, embodying the essence of SmithTech's commitment to excellence.\nJohn Smith's Quantum X1 is not just a computer; it's a statement of innovation and a testament to SmithTech's legacy in pushing the boundaries of what's possible in computing technology. Elevate your computing experience to a whole new dimension with the Quantum X1 – where visionary technology meets reality."
   }
 }

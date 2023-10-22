@@ -22,3 +22,7 @@ def chat_completion_request(
         function_call=function_call,
         messages=messages,
     )
+
+
+def obj_to_json(obj):
+    return json.loads(obj.model_dump_json())
