@@ -13,7 +13,7 @@ class EntityType(OpenAISchema):
 class EntityTypeSuggestionsOutput(OpenAISchema):
     entity_types: List[EntityType] = Field(
         ...,
-        description="""List of entity types suggested. Entity type name should be all uppercase 
+        description="""List of entity types suggested. Entity type name should be all uppercase
         and separated by underscores (i.e. PERSON, LOCATION, PHONE_NUMBER, etc.""",
     )
 

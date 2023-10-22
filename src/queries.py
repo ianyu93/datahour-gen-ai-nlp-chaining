@@ -1,7 +1,8 @@
-from . import models
 from typing import List
-from .utils import chat_completion_request
+
+from . import models
 from .logger import setup_logger
+from .utils import chat_completion_request
 
 logger = setup_logger(__name__, formatter="verbose")
 
@@ -14,7 +15,8 @@ def entity_type_suggestions(
 
     Args:
         persona: Persona of the user, e.g. "student", "teacher", "journalist", etc.
-        purpose: Purpose of the named entity types to be generated, e.g. "to help the user", "to help the user understand the text", etc.
+        purpose: Purpose of the named entity types to be generated, e.g. "to help the user",
+        "to help the user understand the text", etc.
 
     Returns:
         List of named entity types with name, description, and examples.
@@ -23,8 +25,8 @@ def entity_type_suggestions(
         {
             "role": "user",
             "content": f"""
-You are given a persona and a purpose. Act as the persona, understand the persona's goal, and generate a list of named entity types that
-specifically relate to the persona and the purpose. Consider the following context:
+You are given a persona and a purpose. Act as the persona, understand the persona's goal, and generate a list of named
+entity types that specifically relate to the persona and the purpose. Consider the following context:
 Persona: {persona}
 Purpose: {purpose}
  """,
