@@ -1,9 +1,7 @@
-import os
+import json
 from typing import List
 
 import openai
-
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def chat_completion_request(

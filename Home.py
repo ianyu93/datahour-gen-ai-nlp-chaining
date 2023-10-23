@@ -1,6 +1,7 @@
 import concurrent
 import json
 
+import openai
 import pandas as pd
 import streamlit as st
 
@@ -26,6 +27,15 @@ quality check.
 named entities from a given article.
 """
 )
+
+st.markdown(
+    """
+    ### Setup OpenAI API Key
+    First, we need to setup the OpenAI API key. You can find your API key at https://platform.openai.com/account/api-keys.
+    """
+)
+
+openai.api_key = st.text_input("OpenAI API Key", type="password")
 
 st.markdown(
     """
