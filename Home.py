@@ -32,7 +32,8 @@ named entities from a given article.
 st.markdown(
     """
     ### Setup OpenAI API Key
-    First, we need to setup the OpenAI API key. You can find your API key at https://platform.openai.com/account/api-keys.
+    First, we need to setup the OpenAI API key. You can find your API key at
+    https://platform.openai.com/account/api-keys.
     """
 )
 
