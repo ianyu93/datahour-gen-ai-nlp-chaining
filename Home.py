@@ -16,7 +16,8 @@ with open("assets/examples.json") as f:
 st.title("NLP Chaining Example")
 st.markdown(
     """
-In this app, we will show how to chain NLP tasks with GenAI.
+LLMs are very powerful text generation models. Most NLP tasks can be framed as a text generation task via prompt
+engineering. In this app, we will show how to chain NLP tasks with GenAI.
 
 We create a chaining where:
 
