@@ -41,7 +41,7 @@ If you're unfamiliar with Docker, you can watch the following YouTube videos:
 - [Docker Tutorial for Beginners](https://youtu.be/fqMOX6JJhGo?si=8f2f2e9f9f9f4f9f)
 
 ## GitHub Actions and Workflows
-In this repository, we have just one GitHub Action workflow. It is located in `.github/workflows/requirements.yml`. It is a workflow that would export Python dependencies to a `requirements.txt` via [Poetry](https://python-poetry.org/), as this repository uses Poetry for dependency management. It is also required for Streamlit Cloud to deploy the app. We export `requirements.txt` with an `--with dev` option to include dev dependencies for Codespace, but this is not needed for production.
+In this repository, we have just one GitHub Action workflow. It is located in `.github/workflows/requirements.yml`. It is a workflow that would export Python dependencies to a `requirements.txt` via [Poetry](https://python-poetry.org/), as this repository uses Poetry for dependency management. It is also required for Streamlit Cloud to deploy the app. We export `requirements.txt` with an `--with dev` option to include dev dependencies for Codespace, but this is not needed for production. 
 
 It is tied to the concept of Continuous Integration and Continuous Deployment (CI/CD). CI/CD is a DevOps practice that allows for the automation of the build, testing, and deployment of software. You can learn more about CI/CD [here](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment), or watch this YouTube video: [The IDEAL & Practical CI / CD Pipeline - Concepts Overview](https://youtu.be/OPwU3UWCxhw?si=wHCH0uNgoWNWedrm).
 
@@ -51,6 +51,10 @@ Due to time constraints, this repository doesn't include common workflows, but s
 - Deployment
 
 You can learn more about GitHub Actions [here](https://docs.github.com/en/actions). You can also watch this YouTube video: [GitHub Actions Tutorial - Building Your First CI/CD Pipeline](https://youtu.be/4ZGitJVk0D4?si=8f2f2e9f9f9f4f9f).
+
+## Post Create Commands
+
+In Dev Containers, we use [postCreateCommand](https://containers.dev/implementors/json_reference/#:~:text=vs%20object%20properties.-,postCreateCommand,-%F0%9F%8F%B7%EF%B8%8F) to install `requirements.txt` globally in the container. If you'd like to continue development in Poetry, however, you can follow [Using Python and Poetry inside a Dev Container](https://marioscalas.medium.com/using-python-and-poetry-inside-a-dev-container-33c80bc5a22c) to initiate with Poetry environment instead.
 
 # Streamlit
 
