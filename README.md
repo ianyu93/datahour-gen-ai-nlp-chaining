@@ -55,7 +55,7 @@ You can learn more about GitHub Actions [here](https://docs.github.com/en/action
 
 ## Post Create Commands
 
-In Dev Containers, we use [postCreateCommand](https://containers.dev/implementors/json_reference/#:~:text=vs%20object%20properties.-,postCreateCommand,-%F0%9F%8F%B7%EF%B8%8F) to install `requirements.txt` globally in the container. If you'd like to continue development in Poetry, however, you can follow [Using Python and Poetry inside a Dev Container](https://marioscalas.medium.com/using-python-and-poetry-inside-a-dev-container-33c80bc5a22c) to initiate with Poetry environment instead.
+In Dev Containers, we use [postCreateCommand](https://containers.dev/implementors/json_reference/#:~:text=vs%20object%20properties.-,postCreateCommand,-%F0%9F%8F%B7%EF%B8%8F) to install `requirements.txt` globally in the container. If you'd like to continue development in Poetry, however, you can follow [Using Python and Poetry inside a Dev Container](https://marioscalas.medium.com/using-python-and-poetry-inside-a-dev-container-33c80bc5a22c) and [post create script](https://github.com/scalasm/my-python-kata/blob/main/.devcontainer/post-install.sh) to initiate with Poetry environment instead.
 
 # Streamlit
 
