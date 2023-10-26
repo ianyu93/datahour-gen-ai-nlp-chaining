@@ -41,11 +41,11 @@ If you're unfamiliar with Docker, you can watch the following YouTube videos:
 - [Docker Tutorial for Beginners](https://youtu.be/fqMOX6JJhGo?si=8f2f2e9f9f9f4f9f)
 
 ## GitHub Actions and Workflows
-In this repository, we have just one GitHub Action workflow. It is located in `.github/workflows/requirements.yml`. It is a workflow that would export Python dependencies to a `requirements.txt` via Poetry, as this repository uses Poetry for dependency management. It is also required for Streamlit Cloud to deploy the app.
+In this repository, we have just one GitHub Action workflow. It is located in `.github/workflows/requirements.yml`. It is a workflow that would export Python dependencies to a `requirements.txt` via [Poetry](https://python-poetry.org/), as this repository uses Poetry for dependency management. It is also required for Streamlit Cloud to deploy the app. We export `requirements.txt` with an `--with dev` option to include dev dependencies for Codespace, but this is not needed for production.
 
 It is tied to the concept of Continuous Integration and Continuous Deployment (CI/CD). CI/CD is a DevOps practice that allows for the automation of the build, testing, and deployment of software. You can learn more about CI/CD [here](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment), or watch this YouTube video: [The IDEAL & Practical CI / CD Pipeline - Concepts Overview](https://youtu.be/OPwU3UWCxhw?si=wHCH0uNgoWNWedrm).
 
-Due to time constraint, this repository doesn't include commoon workflows, but some of the things you'd want to think about include:
+Due to time constraints, this repository doesn't include common workflows, but some of the things you'd want to think about include:
 - Linting
 - Testing
 - Deployment
@@ -59,7 +59,7 @@ Streamlit is a Python library that allows you to build interactive web apps. You
 
 A common alternative is Gradio, which is a Python library that allows you to build interactive web apps. You can learn more about Gradio [here](https://gradio.app/). 
 
-Perosnally, I find Gradio to be the fastest if you are looking for a simple input and output demo, but Streamlit with more customizable options. That being said, both are not good options for serious web development. They are popular among data scientists and machine learning practitioners because they do cater to the needs of data scientists and machine learning practitioners for quick demos.
+Personally, I find Gradio to be the fastest if you are looking for a simple input and output demo, but Streamlit with more customizable options. That being said, both are not good options for serious web development. They are popular among data scientists and machine learning practitioners because they cater to the needs of data scientists and machine learning practitioners for quick demos.
 
 ## Deployment
 Streamlit Cloud is a service that allows you to deploy your Streamlit app. You can learn more about Streamlit Cloud [here](https://streamlit.io/cloud). Read documentation:
