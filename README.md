@@ -14,10 +14,11 @@
 
 # Overview
 
-This repository contains the code for the DataHour session on AI NLP Chaining, aiming towards beginner to intermediate practitioner. In this README, we will document concepts in this repository that are not covered in the session. See:
+This repository contains the code for the DataHour session on AI NLP Chaining, tailored for beginner to intermediate practitioners. In this README, we will document concepts in this repository that are not covered in the session. See:
 - [Registration Page](https://community.analyticsvidhya.com/c/datahour/nlp-tasks-chaining-with-genai-how-to-utilize-traditional-nlp-knowledge-in-the-world-of-llms/?utm_source=social&utm_medium=speaker&utm_campaign=datahour)
 - [Presentation](https://docs.google.com/presentation/d/1Ud5X3hF7nx6m-kn29BppTwgNUeNBcY_adqr2St7kZZo/edit?usp=sharing)
 - [Streamlit App](https://datahour-gen-ai-nlp-chaining.streamlit.app/)
+- [Webinar Recording](https://community.analyticsvidhya.com/c/datahour/nlp-tasks-chaining-with-genai-how-to-utilize-traditional-nlp-knowledge-in-the-world-of-llms)
 
 # NLP
 
